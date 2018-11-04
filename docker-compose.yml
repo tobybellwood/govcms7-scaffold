@@ -21,7 +21,7 @@ x-environment:
     STAGE_FILE_PROXY_URL: ${STAGE_FILE_PROXY_URL:-}
     LAGOON_ENVIRONMENT_TYPE: ${LAGOON_ENVIRONMENT_TYPE}
     LAGOON_PROJECT: *lagoon-project
-    LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms7-scaffold.docker.amazee.io}
+    LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms-saas.docker.amazee.io}
 
 services:
 
