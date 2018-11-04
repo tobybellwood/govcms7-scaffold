@@ -76,6 +76,10 @@ commands:
     usage: Dump data out into a file. `ahoy mysql-dump local.sql`
     cmd: docker-compose exec test bash -c 'drush sql-dump --ordered-dump' > "$@"
 
+  drush-dl:
+    usage: download a d.o. module using drush
+    cmd: docker-compose exec -T test drush dl --destination=/app/sites/default/modules/contrib/ "$@"
+
   lint:
     usage: Lint code
     cmd: docker-compose exec -T test lint-theme
