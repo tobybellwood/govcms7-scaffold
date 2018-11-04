@@ -9,7 +9,9 @@ x-lagoon-local-dev-url:
 x-volumes:
   &default-volumes
     volumes:
-      - ./themes:/app/profiles/govcms/themes/custom:${VOLUME_FLAGS:-delegated}
+      - ./themes:/app/sites/default/themes/custom:${VOLUME_FLAGS:-delegated}
+      - ./libraries:/app/sites/default/libraries:${VOLUME_FLAGS:-delegated}
+      - ./modules:/app/sites/default/modules:${VOLUME_FLAGS:-delegated}
       - ./files:/app/sites/default/files:delegated
       - ./tests/behat/features:/app/tests/behat/features:${VOLUME_FLAGS:-delegated}
       - ./tests/phpunit/tests:/app/tests/phpunit/tests:${VOLUME_FLAGS:-delegated}
@@ -17,7 +19,7 @@ x-volumes:
 x-environment:
   &default-environment
     LAGOON_PROJECT: *lagoon-project
-    LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms.docker.amazee.io}
+    LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms-saas.docker.amazee.io}
 
 services:
 

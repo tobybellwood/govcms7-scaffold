@@ -50,6 +50,10 @@ commands:
     usage: Login to a website.
     cmd: docker-compose exec -T test drush uli "$@"
 
+  drush-dl:
+    usage: download a d.o. module using drush
+    cmd: docker-compose exec -T test drush dl --destination=/app/sites/default/modules/contrib/ "$@"
+
   lint:
     usage: Lint code
     cmd: docker-compose exec -T test lint-theme
