@@ -1,10 +1,10 @@
 version: '2.3'
 
 x-lagoon-project:
-  &lagoon-project govcms-saas
+  &lagoon-project govcms7-saasplus
 
 x-lagoon-local-dev-url:
-  &lagoon-local-dev-url http://govcms-saas.docker.amazee.io
+  &lagoon-local-dev-url http://govcms7-saasplus.docker.amazee.io
 
 x-volumes:
   &default-volumes
@@ -19,7 +19,7 @@ x-volumes:
 x-environment:
   &default-environment
     LAGOON_PROJECT: *lagoon-project
-    LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms-saas.docker.amazee.io}
+    LAGOON_ROUTE: &default-url ${LOCALDEV_URL:-http://govcms7-saasplus.docker.amazee.io}
 
 services:
 
