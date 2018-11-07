@@ -1,3 +1,5 @@
 FROM govcmslagoon/govcms7
 
 COPY themes/ /app/sites/default/themes/custom
+COPY libraries/ /app/sites/default/libraries
+COPY modules/ /app/sites/default/modules
