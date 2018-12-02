@@ -36,6 +36,23 @@ services:
     environment:
       << : *default-environment
 
+  ide:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.ide
+    labels:
+      lagoon.type: none
+    << : *default-volumes
+    environment:
+      << : *default-environment
+    volumes:
+      - ./themes:/home/project
+    ports:
+      - "3000"
+    networks:
+      - amazeeio-network
+      - default
+
   # [META:ACSF]
   acsf:
     build:
